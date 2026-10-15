@@ -1,0 +1,42 @@
+{
+  "@@locale": "en",
+  "appTitle": "Coffee Shop",
+  "@appTitle": {},
+  "home": "Home",
+  "@home": {},
+  "menu": "Menu",
+  "@menu": {},
+  "cart": "Cart",
+  "@cart": {},
+  "profile": "Profile",
+  "@profile": {},
+  "search": "Search coffee",
+  "@search": {},
+  "popular": "Popular",
+  "@popular": {},
+  "addToCart": "Add to cart",
+  "@addToCart": {},
+  "welcome": "Welcome back!",
+  "@welcome": {},
+  "language": "Language",
+  "@language": {},
+  "english": "English",
+  "@english": {},
+  "arabic": "Arabic",
+  "@arabic": {},
+
+  "appearance" : "Appearance",
+  "@appearance" : {},
+
+  "dark" : "Dark",
+  "@dark" : {},
+  "light" : "Light",
+  "@light" : {},
+  "system" : "System",
+  "@system" : {},
+
+  "testText": "You have pushed the button this many times:",
+  "@testText": {}
+
+
+}
