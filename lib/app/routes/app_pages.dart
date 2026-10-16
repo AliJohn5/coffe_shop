@@ -77,6 +77,12 @@ class AppRouter {
           path: AppRoutes.settings,
           builder: (context, state) => const AppSettingsSection(),
         ),
+
+        GoRoute(
+          //TODO: make forget password
+          path: AppRoutes.forgetPasseord,
+          builder: (context, state) => const LoginPage(),
+        ),
       ],
     );
   }

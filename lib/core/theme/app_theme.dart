@@ -7,6 +7,7 @@ class AppPalette extends ThemeExtension<AppPalette> {
   final Color text;
   final Color muted;
   final Color background;
+  final Color onSurface;
 
   const AppPalette({
     required this.primary,
@@ -14,6 +15,7 @@ class AppPalette extends ThemeExtension<AppPalette> {
     required this.text,
     required this.muted,
     required this.background,
+    required this.onSurface ,
   });
 
   // Light palette from the original design.
@@ -21,8 +23,9 @@ class AppPalette extends ThemeExtension<AppPalette> {
     primary: Color(0xFFC67C4E),
     secondary: Color(0xFFEDD6C8),
     text: Color(0xFF313131),
-    muted: Color(0xFFE3E3E3),
+    muted: Color.fromARGB(255, 215, 215, 215),
     background: Color(0xFFF9F2ED),
+    onSurface: Color.fromARGB(255, 104, 104, 104)
   );
 
   // Dark palette from the generated design.
@@ -32,6 +35,7 @@ class AppPalette extends ThemeExtension<AppPalette> {
     text: Color(0xFF1F1F1F),
     muted: Color(0xFF3A3A3A),
     background: Color(0xFF2A2A2A),
+    onSurface: Color.fromARGB(255, 198, 192, 188)
   );
 
   // Derived colors for common UI elements.
@@ -54,6 +58,7 @@ class AppPalette extends ThemeExtension<AppPalette> {
     Color? text,
     Color? muted,
     Color? background,
+    Color? onSurface,
   }) {
     return AppPalette(
       primary: primary ?? this.primary,
@@ -61,6 +66,7 @@ class AppPalette extends ThemeExtension<AppPalette> {
       text: text ?? this.text,
       muted: muted ?? this.muted,
       background: background ?? this.background,
+      onSurface: onSurface ?? this.onSurface,
     );
   }
 
@@ -74,6 +80,7 @@ class AppPalette extends ThemeExtension<AppPalette> {
       text: Color.lerp(text, other.text, t)!,
       muted: Color.lerp(muted, other.muted, t)!,
       background: Color.lerp(background, other.background, t)!,
+      onSurface: Color.lerp(onSurface, other.onSurface, t)!,
     );
   }
 }
@@ -95,8 +102,8 @@ class AppTheme {
       onSecondary: palette.onSecondary,
       error: const Color(0xFFBA1A1A),
       onError: Colors.white,
-      surface: palette.background,
-      onSurface: palette.onBackground,
+      surface: palette.muted,
+      onSurface: palette.onSurface,
       outline: palette.muted,
       outlineVariant: palette.muted,
       shadow: Colors.black,

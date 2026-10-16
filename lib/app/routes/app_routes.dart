@@ -10,5 +10,7 @@ abstract final class AppRoutes {
   static const  register = "/register";
   static const login = "/login";
   static const splash = '/splash';
+  static const forgetPasseord = '/forget-password';
+
   static String productDetailsPath(String id) => '/products/$id';
 }
